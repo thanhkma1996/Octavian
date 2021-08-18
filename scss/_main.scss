@@ -1,0 +1,41 @@
+.photo-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 90px;
+    margin-bottom: 95px;
+    .photo-column {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 85px 0;
+        .photo-item {
+            h4 {
+                font-size: 22px;
+                font-weight: 800;
+                font-family: $secondary-font;
+                line-height: 1.6;
+                margin-bottom: 15px;
+                color: $gray;
+            }
+
+            .photo-article {
+                font-size: 14px;
+                font-family: $primary-font;
+                line-height: 1.5;
+                color: $gray-light;
+            }
+        }
+    }
+}
+
+.get-started {
+    text-align: center;
+    .btn--primary {
+        background: $blue-color;
+        color: white;
+        padding: 19px 70px;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: $primary-font;
+    }
+}

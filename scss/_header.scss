@@ -1,0 +1,29 @@
+#menu {
+    display: none;
+}
+.header {
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            gap: 0 60px;
+            align-items: center;
+            .phone-number {
+                font-family: $secondary-font;
+                font-size: 16px;
+                line-height: normal;
+                color: $black;
+                a {
+                    font-family: $primary-font;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: $black;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+#brand {
+    .section-list-brand {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 90px 0;
+        .brand-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 50px;
+            cursor: pointer;
+        }
+    }
+}
