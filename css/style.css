@@ -1,6 +1,73 @@
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+  position: relative;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+#menu {
+  position: absolute;
+  right: 0;
+  z-index: 999;
+  background: white;
+  height: 100%;
+  width: 300px;
+  display: none;
+}
+#menu.is-active {
+  display: block;
+}
+#menu ion-icon.md.hydrated {
+  cursor: pointer;
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+#menu .menu-list {
+  list-style: none;
+  height: 100%;
+  padding: 70px 20px 20px;
+}
+#menu .menu-list li {
+  margin-bottom: 15px;
+}
+#menu .menu-list li a {
+  display: block;
+  padding: 15px;
+  text-transform: capitalize;
+  color: #393e46;
+  border-radius: 6px;
+  transition: all 0.15s linear;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.5;
+}
+#menu .menu-list li a:hover {
+  color: white;
+  background-color: #4944f2;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 70px;
+  right: 70px;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 0.5rem;
+  z-index: 99;
 }
 
 .container {
@@ -24,8 +91,140 @@ section {
   display: inline-flex;
 }
 
-#menu {
-  display: none;
+.btn {
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Open sans", sans-serif;
+  padding-left: 70px;
+  padding-right: 70px;
+  border-radius: 6px;
+}
+
+.btn--secondary {
+  background-color: transparent;
+  background-image: linear-gradient(to right, #f475a0, #feac3d);
+}
+
+::-webkit-input-placeholder {
+  /* Edge */
+  color: white;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-family: "Open sans", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-family: "Open sans", sans-serif;
+}
+
+::placeholder {
+  color: white;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-family: "Open sans", sans-serif;
+}
+
+input, textarea, select, button {
+  border: none;
+  outline: none;
+}
+
+#service .header-service {
+  text-align: center;
+  margin: 60px;
+}
+#service .header-service h4 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #000000;
+}
+#service .header-service p {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  color: #6a727f;
+  line-height: 1.5;
+}
+#service .list-service {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0 90px;
+  margin-bottom: 95px;
+}
+#service .list-service h4 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #000000;
+}
+#service .list-service p {
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: normal;
+  line-height: normal;
+  color: #6a727f;
+}
+
+#contact {
+  padding: 150px 0;
+  background: url(../images/contact-bg.png) no-repeat center/cover;
+}
+#contact .form-contact-container {
+  max-width: 600px;
+  margin: 0 align;
+}
+#contact .form-contact-container .form-contact .header-content {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#contact .form-contact-container .form-contact .header-content h4 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: white;
+  margin-top: 0;
+}
+#contact .form-contact-container .form-contact .header-content p {
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  line-height: 1.5;
+}
+#contact .form-contact-container .form-contact button {
+  height: 55px;
+}
+#contact .form-contact-container .form-contact .contact-form .contact-field {
+  padding: 20px 30px;
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  background-color: transparent;
+  color: white;
+  transition: border 0.2s linear;
+}
+#contact .form-contact-container .form-contact .contact-form textarea {
+  line-height: 1.55;
+  resize: none;
+  min-height: 100px;
+  border: none;
 }
 
 .header .main-header {
@@ -131,6 +330,55 @@ section {
   margin-top: 50px;
 }
 
+#footer {
+  background: #282f3a;
+  padding: 150px 0;
+}
+#footer .footer-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0 130px;
+}
+#footer .footer-main .footer-column h3 {
+  color: white;
+  margin-top: 0;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+#footer .footer-main .footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+#footer .footer-main .footer-column ul li {
+  margin-bottom: 15px;
+  font-family: "Raleway", sans-serif;
+  color: #6a727f;
+}
+#footer .footer-main .footer-column ul li a {
+  font-size: 14px;
+  line-height: 1.5;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  color: #6a727f;
+}
+#footer .footer-main .footer-column .footer-desc {
+  font-size: 14px;
+  letter-spacing: 0.3;
+  margin: 50px 0;
+  line-height: 1.4;
+  font-family: "Raleway", sans-serif;
+  color: #6a727f;
+}
+#footer .footer-main .footer-column .social a {
+  color: #6a727f;
+  text-decoration: none;
+  margin-right: 20px;
+}
+#footer .footer-main .footer-column .social a:hover {
+  color: white;
+}
+
 #brand .section-list-brand {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -176,11 +424,141 @@ section {
 .get-started .btn--primary {
   background: #4944f2;
   color: white;
+  height: auto;
   padding: 19px 70px;
   cursor: pointer;
   text-decoration: none;
   border-radius: 5px;
   font-family: "Open sans", sans-serif;
+}
+
+@media screen and (max-width: 1023px) {
+  section {
+    padding: 0 0 150px 0;
+  }
+
+  .header .navigation .phone-number {
+    display: none;
+  }
+
+  .banner .main-banner .left-content h2 {
+    font-size: 60px;
+  }
+  .banner .main-banner .left-content h1 {
+    font-size: 100px;
+  }
+
+  .photo-list {
+    grid-gap: 0 20px;
+    margin-bottom: 45px;
+  }
+  .photo-list .photo-column {
+    gap: 40px 0;
+  }
+  .photo-list .photo-column .photo-item h4 {
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  #our-team .team-main {
+    flex-direction: column;
+    gap: 60px 0;
+  }
+  #our-team .team-main .team-content {
+    max-width: 100%;
+  }
+  #our-team .team-main .photo-content .photo-team-column {
+    display: grid;
+  }
+
+  #service .list-service {
+    grid-gap: 0 40px;
+  }
+  #service .list-service h4 {
+    font-size: 18px;
+  }
+  #service .list-service .item {
+    margin-bottom: 50px;
+  }
+
+  #footer .footer-main {
+    gap: 0 50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  section {
+    padding: 0 0 50px 0;
+  }
+
+  .banner .main-banner .left-content h2 {
+    font-size: 30px;
+  }
+  .banner .main-banner .left-content h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .banner .main-banner .left-content a {
+    font-size: 14px;
+  }
+
+  .photo-list {
+    display: block;
+  }
+  .photo-list img {
+    width: 100%;
+  }
+
+  #brand .section-list-brand {
+    display: block;
+  }
+  #brand .brand-item {
+    margin-bottom: 40px;
+  }
+
+  p {
+    font-size: 14px !important;
+  }
+
+  #service .header-service {
+    text-align: center;
+    margin: 0 0 50px;
+  }
+  #service .header-service h4 {
+    font-size: 24px;
+    text-align: center;
+  }
+  #service .list-service {
+    display: block;
+  }
+
+  #our-team .team-main .team-content {
+    text-align: center;
+  }
+  #our-team .team-main .team-content h4 {
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  #contact {
+    padding: 50px 0;
+  }
+  #contact .form-contact-container .form-contact .header-content h4 {
+    font-size: 24px;
+  }
+
+  #footer {
+    padding: 50px 0;
+  }
+  #footer .footer-main {
+    display: block;
+  }
+  #footer .footer-main .footer-column {
+    margin-bottom: 50px;
+  }
+  #footer .footer-main .footer-column .footer-desc {
+    margin: 30px 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

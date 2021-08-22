@@ -1,0 +1,100 @@
+#service {
+    .header-service {
+        text-align: center;
+        margin: 60px;
+        h4 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-family: $secondary-font;
+            line-height: 1.5;
+            letter-spacing: normal;
+            color: $black;
+        }
+
+        p {
+            font-size: 16px;
+            font-family: $secondary-font;
+            color: $gray-light;
+            line-height: 1.5;
+        }
+    }
+
+    .list-service {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0 90px;
+        margin-bottom: 95px;
+        h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-family: $secondary-font;
+            line-height: 1.5;
+            letter-spacing: normal;
+            color: $black;
+        }
+
+        p {
+            font-size: 14px;
+            font-family: $secondary-font;
+            letter-spacing: normal;
+            line-height: normal;
+            color: $gray-light
+        }
+    }
+}
+
+#contact {
+    padding: 150px 0;
+    background: url(../images/contact-bg.png) no-repeat center/cover;
+    .form-contact-container {
+        max-width: 600px;
+        margin: 0 align;
+        .form-contact {
+            .header-content {
+                text-align: center;
+                margin-bottom: 50px;
+                h4 {
+                    font-size: 36px;
+                    margin-bottom: 15px;
+                    font-family: $secondary-font;
+                    line-height: 1.5;
+                    letter-spacing: normal;
+                    color: white;
+                    margin-top: 0;
+                }
+        
+                p {
+                    font-size: 16px;
+                    font-family: $secondary-font;
+                    color: white;
+                    line-height: 1.5;
+                }
+            }
+
+            button {
+                height: 55px;
+            }
+
+            .contact-form {
+                .contact-field {
+                    padding: 20px 30px;
+                    display: block;
+                    width: 100%;
+                    border: 1px solid rgba(255, 255, 255, 0.5);
+                    border-radius: 4px;
+                    margin-bottom: 30px;
+                    background-color: transparent;
+                    color: white;
+                    transition: border 0.2s linear;
+                }
+
+                textarea {
+                    line-height: 1.55;
+                    resize: none;
+                    min-height: 100px;
+                    border: none;
+                }
+            }
+        }
+    }
+}

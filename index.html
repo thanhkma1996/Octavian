@@ -13,12 +13,14 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" ></script>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   </head>
    
     <body>
          <!-- Menu mobie -->
          <div id="menu">
-            <ion-icon name="close-outline"></ion-icon>
+            <ion-icon name="close-outline" class="menu-close"></ion-icon>
             <ul class="menu-list">
                 <li class="menu-item">
                     <a href="#portfolio">Portfolio</a>
@@ -42,6 +44,10 @@
          </div>
          <!-- End menu -->
 
+         <a href="#" class="back-to-top">
+            <ion-icon name="rocket" role="img" class="md hydrated" aria-label="rocket"></ion-icon>
+        </a>
+
          <!--  Header -->
          <div class="header">
              <div class="container">
@@ -60,7 +66,7 @@
                         <a class="search-icon" href="#">
                             <img src="images/icon-search.png">
                         </a>
-                        <a href="toggle-menu" href="#">
+                        <a class="menu-toggle" href="#">
                             <img src="images/icon-bars.png">
                         </a>
                     </div> 
@@ -254,5 +260,134 @@
          </section>
          <!-- End our team -->
 
+         <!-- Section service -->
+          <section id="service">
+               <div class="container">
+                    <div class="header-service">
+                            <h4>Take a look at our services</h4>
+                            <p>Integer eu metus at orci scelerisque rutrum. Vivamus condimentu ipsum vitae iaculis cursus, turpis nisl.</p>
+                    </div>
+
+                    <div class="list-service">
+                        <div class="item">
+                             <img src="images/blog1.png" alt="blog">
+                             <div class="content-service">
+                                 <h4>Illustration development basics for beginners</h4>
+                                 <p>Design</p>
+                             </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="images/blog2.png" alt="blog">
+                            <div class="content-service">
+                                <h4>Illustration development basics for beginners</h4>
+                                <p>Design</p>
+                            </div>
+                       </div>
+
+                       <div class="item">
+                        <img src="images/blog3.png" alt="blog">
+                        <div class="content-service">
+                            <h4>Illustration development basics for beginners</h4>
+                            <p>Design</p>
+                        </div>
+                   </div>
+                    </div>
+               </div>
+          </section>
+         <!-- end section service -->
+
+         <!-- Section contact -->
+          <section id="contact">
+              <div class="container form-contact-container">
+                    <div class="form-contact">
+                            <div class="header-content">
+                                <h4>Contact us to Grow your Business</h4>
+                                <p>Integer eu metus at orci scelerisque rutrum. Vivamus condimentum, ipsum vitae iaculis cursus, turpis nisl ultricies massa.</p>
+                            </div>
+
+                            <form action="javascript:void(0);" class="contact-form">
+                                <input type="text" class="contact-input contact-field" placeholder="customer" required="">
+                                <input type="email" class="contact-input contact-field" placeholder="E.g., customer@gamil.com" required="">
+                                <textarea class="contact-area contact-field" placeholder="Your message" required="" minlength="50"></textarea>
+                                <button type="submit" class="btn btn--secondary"> Send Message</button>
+                            </form>
+                    </div>
+                </div>
+          </section>
+         <!-- End section contact -->
+
+         <!-- Footer -->
+          <section id="footer">
+              <div class="container">
+                <div class="footer-main">
+                    <div class="footer-column">
+                      <a href="index.html" class="footer-logo"><img src="./images/logo-footer.png" alt=""></a>
+                      <div class="footer-desc text">
+                        Vivamus dapibus et purus quis mollis. Mauris tempus tortor vel
+                        mi eleifend laoreet. Nulla laoreet sapien erat.
+                      </div>
+                      <div class="social">
+                        <a href="#" class="social-item">
+                          <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+                        </a>
+                        <a href="#" class="social-item">
+                          <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+                        </a>
+                        <a href="#" class="social-item">
+                          <ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
+                        </a>
+                        <a href="#" class="social-item">
+                          <ion-icon name="logo-dribbble" role="img" class="md hydrated" aria-label="logo dribbble"></ion-icon>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="footer-column">
+                      <h3 class="footer-heading second-font">Usefull Links</h3>
+                      <ul class="footer-links">
+                        <li class="footer-item">
+                          <a href="#" class="footer-link">About Us</a>
+                        </li>
+                        <li class="footer-item">
+                          <a href="#" class="footer-link">Contact us</a>
+                        </li>
+                        <li class="footer-item">
+                          <a href="#" class="footer-link">Terms of Services</a>
+                        </li>
+                        <li class="footer-item">
+                          <a href="#" class="footer-link">Plan &amp; Precing</a>
+                        </li>
+                        <li class="footer-item">
+                          <a href="#" class="footer-link">Site Map</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="footer-column">
+                      <h3 class="footer-heading second-font">Contact Us</h3>
+                      <ul class="footer-info">
+                        <li>Phone Number 2: ( + 051 ) 958 23 78 51</li>
+                        <li>
+                          Phone Number 2:
+                          <span class="footer-highlight">( + 051 ) 958 23 78 51</span>
+                        </li>
+                      </ul>
+                      <ul class="footer-info">
+                        <li>
+                          <a href="mailto:support@ocatavian.io">Email: support@ocatavian.io</a>
+                        </li>
+                        <li>Fax: support@ocatavian.io</li>
+                      </ul>
+                      <ul class="footer-info">
+                        <li>
+                          Address: Envato Pty Ltd 13/2 Permanent ST melbourne VLC 3000 -
+                          Australia
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+              </div>
+          </section>
+         <!-- End footer -->
+         <script type="text/javascript" src="./js/main.js"></script>
    </body>
   </html>

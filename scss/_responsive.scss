@@ -1,0 +1,169 @@
+@media screen and (max-width: 1023px) {
+    section {
+        padding:  0 0 150px 0;
+    }
+    .header {
+        .navigation {
+            .phone-number {
+                display: none;
+            }
+        }
+    }
+
+    .banner {
+        .main-banner {
+            .left-content  {
+                h2 {
+                    font-size: 60px;
+                }
+
+                h1 {
+                    font-size: 100px;
+                }
+            }
+        }
+    }
+
+    .photo-list {
+        grid-gap: 0 20px;
+        margin-bottom: 45px;
+        .photo-column {
+            gap: 40px 0;
+            .photo-item {
+                h4 {
+                    margin-top: 15px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    #our-team {
+        .team-main {
+            flex-direction: column;
+            gap: 60px 0;
+            .team-content {
+                max-width: 100%;
+            }
+
+            .photo-content {
+                .photo-team-column {
+                    display: grid;
+                }
+            }
+        }
+    }
+
+    #service .list-service {
+        grid-gap: 0 40px; 
+        h4 {
+            font-size: 18px;
+        }
+
+        .item {
+            margin-bottom: 50px;
+        }
+    }
+
+    #footer .footer-main {
+        gap: 0 50px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    section {
+        padding: 0 0 50px 0;
+    }
+
+    .banner {
+        .main-banner {
+            .left-content {
+                h2 {
+                    font-size: 30px;
+                }
+
+                h1 {
+                    font-size: 40px;
+                    margin-bottom: 15px;
+                }
+
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .photo-list {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+
+    #brand {
+        .section-list-brand {
+            display: block;
+        }
+
+        .brand-item {
+            margin-bottom: 40px;
+        }
+    }
+
+    p {
+        font-size: 14px !important;
+    }
+
+    #service {
+        .header-service {
+            text-align: center;
+            margin: 0 0 50px;
+            h4 {
+                font-size: 24px;
+                text-align: center;
+            }
+        }
+
+        .list-service  {
+            display: block;
+        }
+    }
+  
+
+    #our-team .team-main  {
+        .team-content {
+            text-align: center;
+            h4 {
+                font-size: 24px;
+                line-height: 1.4;
+                text-align: center;
+            }
+        }
+    }
+
+    #contact {
+        padding: 50px 0;
+        .form-contact-container {
+            .form-contact .header-content h4 {
+                font-size: 24px;
+
+            }
+        }
+       
+    }
+
+    #footer {
+        padding: 50px 0;
+        .footer-main {
+            display: block;
+            .footer-column {
+                margin-bottom: 50px;
+                .footer-desc  {
+                    margin: 30px 0;
+                }
+            }
+        }
+    }
+  
+}
